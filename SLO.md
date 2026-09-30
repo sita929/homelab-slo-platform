@@ -94,5 +94,5 @@ how much error budget it used, and a screenshot of the budget graph.
 | Date | Drill | Start | Alert fired | Recovered | Budget used | Notes |
 |---|---|---|---|---|---|---|
 | 2026-09-30 | pc2 shut down (`wsl --shutdown`) | 14:44:17 | None: SLI blind to it (finding 1) | 14:49:33 | Not measured | [Drill 2 write-up](drills/002-node-failure/README.md) |
-| | Error injection (`error_rate` 0.5) | | | | | |
-| | Latency injection (`latency_ms` 400) | | | | | |
+| 2026-09-30 | Error injection (`error_rate` 0.5) | 10:25:20 | Page 10:37:30 (+12 min), ticket 10:39:37 | 11:11:37 (page cleared 10:47:30) | ~4% of error budget | [Drill 1 write-up](drills/001-error-injection/README.md) |
+| 2026-09-30 | Latency injection (`latency_ms` 400) | 16:52:51 | Page 17:07:55 (+15 min), ticket 17:22:50 (+30 min) | 17:53:53 (page cleared 17:28:58) | 6.7% of latency budget | [Drill 3 write-up](drills/003-latency-injection/README.md) |
